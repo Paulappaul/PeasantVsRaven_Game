@@ -122,7 +122,7 @@ std::string Character::getPassword(){
     return Password;
 }
 void Character::addItem(std::string item){
-    bag.push_back(item);
+    basket.push_back(item);
 }
 
 
@@ -218,15 +218,15 @@ std::string coinToss(bool coinCheck){
 
 void Character::printItems(){
 
-for (auto it = begin(bag); it != end(bag); ++it) {
+for (auto it = begin(basket); it != end(basket); ++it) {
     std::cout <<"item: "<< *it << std::endl;
 }
 }
 
 void Character::removeItem(const std::string deleteItem){
-   auto item_to_be_deleted = std::find(bag.begin(), bag.end(), deleteItem); 
-   if(item_to_be_deleted != bag.end()){
-      bag.erase(item_to_be_deleted);
+   auto item_to_be_deleted = std::find(basket.begin(), basket.end(), deleteItem); 
+   if(item_to_be_deleted != basket.end()){
+      basket.erase(item_to_be_deleted);
       std::cout << "item removed" << std::endl;
    }else{
       std::cout << "error found" << std::endl;
@@ -246,9 +246,9 @@ void Character::deductPoints(){
 /*RANDOM LOGIC GOES HERE, IMPROVE INTO SINGLE FUNCTION?*/
 
 std::string Character::vectorsize(){
-   std::cout << bag.size() << std::endl;
+   std::cout << basket.size() << std::endl;
    
-   std::string ravenC = bag.at(ravenChoice(bag.size())); // grabs a random item out the bag, stores what was stolen in a string
+   std::string ravenC = basket.at(ravenChoice(basket.size())); // grabs a random item out the bag, stores what was stolen in a string
    return ravenC;
 }
 

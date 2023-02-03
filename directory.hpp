@@ -23,7 +23,6 @@ bool fruitbool = false;
 bool vegetablebool = false;
 bool leafyVegbool = false;
 bool rootVegbool = false;
-
 bool intro = false;
 
 //structs
@@ -96,7 +95,7 @@ public:
 
 private:
     int points =1;
-    std::vector<std::string> bag = {};
+    std::vector<std::string> basket = {};
     std::string Username;
     std::string Password;
 };
